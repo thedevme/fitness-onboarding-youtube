@@ -11,14 +11,12 @@ struct CustomNavigationButton: View {
     
     var body: some View {
         Button(action: { action() }) {
-            ZStack {
-                Text(type.rawValue)
-            }
-            .font(.custom(.bold, size: 18))
-            .padding(.vertical, 15)
-            .padding(.horizontal, 20)
-            .foregroundColor(type == .previous ? .basePurple : .white)
-            .background(type == .previous ? Color.white : Color.basePurple)
+            Text(type.rawValue)
+                .font(.custom(.bold, size: 18))
+                .padding(.vertical, 15)
+                .padding(.horizontal, 20)
+                .foregroundColor(type == .previous ? .basePurple : .white)
+                .background(type == .previous ? Color.white : Color.basePurple)
         }
         .buttonStyle(.plain)
         .cornerRadius(11)
